@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Educación para el Reciclaje</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: linear-gradient(to bottom right, #eafaf1, #ffffff);
+      color: #2c3e50;
+      padding: 1.5rem;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: #ffffffdd;
+      padding: 1rem 1.5rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.06);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      backdrop-filter: blur(10px);
+      margin-bottom: 2rem;
+    }
+
+    nav h1 {
+      font-size: 1.4rem;
+      color: #2e7d32;
+    }
+
+    nav ul {
+      display: flex;
+      list-style: none;
+      gap: 1.2rem;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: #388e3c;
+      font-weight: 600;
+      transition: color 0.2s ease;
+    }
+
+    nav ul li a:hover {
+      color: #1b5e20;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+      color: #2e7d32;
+      font-weight: 700;
+    }
+
+    header h3 {
+      font-size: 1.3rem;
+      color: #388e3c;
+      margin-top: 0.4rem;
+      font-weight: 500;
+    }
+
+    main {
+      max-width: 960px;
+      margin: auto;
+    }
+
+    section {
+      background-color: #ffffffee;
+      border-left: 6px solid #66bb6a;
+      padding: 1.8rem;
+      border-radius: 14px;
+      margin-bottom: 2.2rem;
+      box-shadow: 0 6px 14px rgba(0, 0, 0, 0.06);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    section:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 10px 24px rgba(0, 0, 0, 0.08);
+    }
+
+    section h2 {
+      font-size: 1.7rem;
+      color: #1b5e20;
+      margin-bottom: 1rem;
+    }
+
+    p {
+      font-size: 1.05rem;
+      margin-bottom: 1rem;
+    }
+
+    ul {
+      list-style: none;
+      padding-left: 1.2rem;
+    }
+
+    ul li {
+      padding-left: 0.6rem;
+      margin-bottom: 0.6rem;
+    }
+
+    .imagen-seccion {
+      width: 100%;
+      max-width: 640px;
+      height: auto;
+      margin: 1.5rem auto;
+      border-radius: 14px;
+      display: block;
+      object-fit: cover;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+      transition: transform 0.3s ease;
+    }
+
+    .imagen-seccion:hover {
+      transform: scale(1.03);
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 4rem;
+      font-size: 0.9rem;
+      color: #777;
+      padding-top: 2rem;
+      border-top: 1px solid #ccc;
+    }
+
+    footer p:last-child {
+      font-size: 0.75rem;
+      color: #999;
+      margin-top: 0.3rem;
+    }
+
+    .subir {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: #4caf50;
+      color: white;
+      padding: 0.7rem 1rem;
+      border-radius: 50px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      font-weight: bold;
+      cursor: pointer;
+      border: none;
+      transition: background 0.3s ease;
+      z-index: 100;
+    }
+
+    .subir:hover {
+      background: #2e7d32;
+    }
+
+    @media (max-width: 768px) {
+      nav ul {
+        display: none;
+      }
+
+      nav::after {
+        content: "☰";
+        font-size: 1.5rem;
+        cursor: pointer;
+      }
+
+      header h1 {
+        font-size: 2rem;
+      }
+
+      section {
+        padding: 1.2rem;
+      }
+
+      .imagen-seccion {
+        max-width: 100%;
+        margin: 1rem 0;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <h1>EcoRecicla</h1>
+    <ul>
+      <li><a href="#importancia">¿Por qué reciclar?</a></li>
+      <li><a href="#separacion">Separación</a></li>
+      <li><a href="#comunidad">Comunidad</a></li>
+      <li><a href="#acciones">Acciones</a></li>
+      <li><a href="#talleres">Talleres</a></li>
+    </ul>
+  </nav>
+
+  <header>
+    <h1>🌿 Transformando nuestro entorno</h1>
+    <h3>Educación para el reciclaje y cuidado comunitario</h3>
+  </header>
+
+  <main>
+    <section id="importancia">
+      <h2>¿Por qué es importante reciclar? ♻️</h2>
+      <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=800&q=80" alt="Contenedor de reciclaje" class="imagen-seccion" />
+      <p>Cada año, millones de toneladas de residuos terminan contaminando nuestros suelos, ríos y mares. El reciclaje es una forma efectiva de reducir el impacto ambiental, ahorrar recursos naturales y proteger la salud del planeta.</p>
+      <ul>
+        <li>Reduce la contaminación del agua, el aire y el suelo.</li>
+        <li>Disminuye el uso de energía y recursos naturales.</li>
+        <li>Ayuda a combatir el cambio climático.</li>
+        <li>Fomenta la economía circular y la generación de empleos verdes.</li>
+      </ul>
+    </section>
+
+    <section id="separacion">
+      <h2>¿Cómo separar los residuos? 🧃</h2>
+      <img src="rec.png" alt="Separación de residuos" class="imagen-seccion" />
+      <ul>
+        <li><strong>Orgánicos:</strong> restos de comida, cáscaras, hojas, etc.</li>
+        <li><strong>Plásticos:</strong> botellas, envases, bolsas limpias.</li>
+        <li><strong>Papel y cartón:</strong> hojas, cajas, cuadernos (sin grasa ni comida).</li>
+        <li><strong>Vidrio:</strong> botellas y frascos (limpios y sin tapas).</li>
+        <li><strong>Residuos especiales:</strong> pilas, electrónicos, aceites (llévalos a puntos limpios).</li>
+      </ul>
+    
+    </section>
+
+    <section id="comunidad">
+      <h2>Cuidado comunitario: el valor de actuar juntos 🧑‍🤝‍🧑</h2>
+      <img src="https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=800&q=80" alt="Comunidad trabajando junta" class="imagen-seccion" />
+      <p>El cuidado comunitario implica más que reciclar: es construir un entorno donde todas las personas se sientan responsables y comprometidas con el bienestar común.</p>
+      <ul>
+        <li>Participando en jornadas de limpieza.</li>
+        <li>Cuidando parques y espacios verdes.</li>
+        <li>Apoyando huertas comunitarias.</li>
+        <li>Compartiendo información con vecinos y vecinas.</li>
+        <li>Promoviendo el respeto, la empatía y la solidaridad.</li>
+      </ul>
+    </section>
+
+    <section id="acciones">
+      <h2>¿Qué puedes hacer hoy? 🌱</h2>
+      <ul>
+        <li>Comienza a separar los residuos en casa.</li>
+        <li>Únete o crea un grupo ambiental en tu comunidad.</li>
+        <li>Reduce el consumo de plásticos de un solo uso.</li>
+        <li>Reutiliza objetos antes de desecharlos.</li>
+        <li>Participa en nuestras actividades y talleres.</li>
+      </ul>
+    </section>
+
+    <section id="talleres">
+      <h2>Actividades y talleres 📆</h2>
+      <p>Próximamente:</p>
+      <ul>
+        <li>Taller de reciclaje creativo (manualidades con materiales reciclados)</li>
+        <li>Jornada comunitaria de limpieza del barrio</li>
+        <li>Curso online gratuito: “Introducción al reciclaje doméstico”</li>
+        <li>Feria de intercambio: trae lo que ya no usas, llévate lo que necesitas</li>
+      </ul>
+      <p>¡Consulta nuestra sección de eventos para más información!</p>
+    </section>
+
+    <section>
+      <h2>📣 ¡Súmate!</h2>
+      <p>Cuidar el planeta es una tarea de todos. Comparte esta página, involucra a tu familia y amigos, y sé parte del cambio. Juntos podemos construir comunidades más limpias, saludables y unidas.</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; Samantha Janeth Sanchez Garza</p>
+   
+  </footer>
+
+  <button class="subir" onclick="window.scrollTo({ top: 0, behavior: 'smooth' })">⬆ Subir</button>
+
+</body>
+</html>
