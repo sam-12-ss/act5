@@ -166,28 +166,57 @@
       background: #2e7d32;
     }
 
+    /* --- Estilo para el menú hamburguesa --- */
+    .hamburguesa {
+      display: none;
+      cursor: pointer;
+      font-size: 1.5rem;
+      color: #388e3c;
+    }
+
+    nav ul {
+      display: flex;
+    }
+
+    nav ul li {
+      display: inline-block;
+    }
+
     @media (max-width: 768px) {
       nav ul {
         display: none;
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        background-color: #fff;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.1);
       }
 
-      nav::after {
-        content: "☰";
-        font-size: 1.5rem;
-        cursor: pointer;
+      nav ul li {
+        width: 100%;
+        text-align: center;
+        margin: 0;
       }
 
-      header h1 {
-        font-size: 2rem;
+      .hamburguesa {
+        display: block;
       }
 
-      section {
-        padding: 1.2rem;
+      .hamburguesa.open + ul {
+        display: block;
       }
 
-      .imagen-seccion {
-        max-width: 100%;
-        margin: 1rem 0;
+      nav ul li a {
+        padding: 1rem;
+        display: block;
+        border-top: 1px solid #ddd;
+        transition: background-color 0.3s ease;
+      }
+
+      nav ul li a:hover {
+        background-color: #f1f1f1;
       }
     }
   </style>
@@ -196,6 +225,7 @@
 
   <nav>
     <h1>EcoRecicla</h1>
+    <div class="hamburguesa" onclick="toggleMenu()">☰</div>
     <ul>
       <li><a href="#importancia">¿Por qué reciclar?</a></li>
       <li><a href="#separacion">Separación</a></li>
@@ -233,57 +263,46 @@
         <li><strong>Vidrio:</strong> botellas y frascos (limpios y sin tapas).</li>
         <li><strong>Residuos especiales:</strong> pilas, electrónicos, aceites (llévalos a puntos limpios).</li>
       </ul>
-    
     </section>
 
     <section id="comunidad">
       <h2>Cuidado comunitario: el valor de actuar juntos 🧑‍🤝‍🧑</h2>
-      <img src="https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=800&q=80" alt="Comunidad trabajando junta" class="imagen-seccion" />
-      <p>El cuidado comunitario implica más que reciclar: es construir un entorno donde todas las personas se sientan responsables y comprometidas con el bienestar común.</p>
-      <ul>
-        <li>Participando en jornadas de limpieza.</li>
-        <li>Cuidando parques y espacios verdes.</li>
-        <li>Apoyando huertas comunitarias.</li>
-        <li>Compartiendo información con vecinos y vecinas.</li>
-        <li>Promoviendo el respeto, la empatía y la solidaridad.</li>
-      </ul>
+      <img src="comunidad.jpg" alt="Reciclaje comunitario" class="imagen-seccion" />
+      <p>La comunidad juega un papel crucial en la gestión de residuos. Juntos podemos impulsar cambios reales, desde la educación ambiental hasta la participación en proyectos de reciclaje.</p>
     </section>
 
     <section id="acciones">
-      <h2>¿Qué puedes hacer hoy? 🌱</h2>
+      <h2>Acciones para un mundo más verde 🌱</h2>
       <ul>
-        <li>Comienza a separar los residuos en casa.</li>
-        <li>Únete o crea un grupo ambiental en tu comunidad.</li>
-        <li>Reduce el consumo de plásticos de un solo uso.</li>
-        <li>Reutiliza objetos antes de desecharlos.</li>
-        <li>Participa en nuestras actividades y talleres.</li>
+        <li>Promover campañas de sensibilización sobre reciclaje.</li>
+        <li>Implementar puntos de reciclaje en barrios y escuelas.</li>
+        <li>Fomentar la reducción de residuos desde el hogar.</li>
+        <li>Recoger plásticos y vidrios para su reciclaje.</li>
       </ul>
     </section>
 
     <section id="talleres">
-      <h2>Actividades y talleres 📆</h2>
-      <p>Próximamente:</p>
-      <ul>
-        <li>Taller de reciclaje creativo (manualidades con materiales reciclados)</li>
-        <li>Jornada comunitaria de limpieza del barrio</li>
-        <li>Curso online gratuito: “Introducción al reciclaje doméstico”</li>
-        <li>Feria de intercambio: trae lo que ya no usas, llévate lo que necesitas</li>
-      </ul>
-      <p>¡Consulta nuestra sección de eventos para más información!</p>
-    </section>
-
-    <section>
-      <h2>📣 ¡Súmate!</h2>
-      <p>Cuidar el planeta es una tarea de todos. Comparte esta página, involucra a tu familia y amigos, y sé parte del cambio. Juntos podemos construir comunidades más limpias, saludables y unidas.</p>
+      <h2>Talleres y actividades 🛠️</h2>
+      <p>Participa en nuestros talleres prácticos donde aprenderás a reciclar y a crear nuevos productos a partir de materiales reciclados. ¡Tu creatividad puede hacer una gran diferencia!</p>
     </section>
   </main>
 
   <footer>
-    <p>&copy; Samantha Janeth Sanchez Garza</p>
-   
+    <p>&copy; 2025 EcoRecicla | Todos los derechos reservados</p>
+    <p>¡Súmate a la transformación ecológica!</p>
   </footer>
 
-  <button class="subir" onclick="window.scrollTo({ top: 0, behavior: 'smooth' })">⬆ Subir</button>
+  <button class="subir" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">↑</button>
+
+  <script>
+    function toggleMenu() {
+      const menu = document.querySelector('.hamburguesa');
+      const navLinks = document.querySelector('nav ul');
+      menu.classList.toggle('open');
+      navLinks.classList.toggle('open');
+    }
+  </script>
 
 </body>
 </html>
+
